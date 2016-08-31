@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Working Interview</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body data-ng-app="myApp">
+  <h1>Working Interview</h1>
+
+  <div data-ng-controller='someController as vm'>
+    <button data-ng-click="vm.toggleForm()" class="dropbtn">Report</button>
+
+    <form data-ng-show="vm.formIsVisible" data-ng-submit="vm.create()">
+      <div class="dropdown">
+        <div>Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. Some text here. </div>
+        <button data-ng-click="vm.myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+        <div data-ng-repeat="option in vm.options">
+          <p data-ng-show="!editTodo"><a href="#">{{option}}</a>
+          </p>
+          </div>
+        </div>
+
+      </div>
+      <button data-ng-click="vm.update()" class='top'>Save</button>
+      <button data-ng-click="vm.cancel()" class='top'>Cancel</button>
+    </form>
+
+
+
+  </div>
+
+</body>
+</html>
